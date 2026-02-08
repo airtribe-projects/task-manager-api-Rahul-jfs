@@ -40,9 +40,7 @@ app.get("/tasks/:id", (req, res) => {
   res.status(200).json(task);
 });
 
-/**
- * POST /tasks
- */
+/* POST /tasks */
 app.post("/tasks", (req, res) => {
   if (!isValidTask(req.body)) {
     return res.status(400).json({ error: "Invalid task data" });
